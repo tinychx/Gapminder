@@ -2,6 +2,15 @@
 The data we can find within Gapminder range from the number of HIV cases, life expectancy, infant malnutrition, the number of children a woman has had, CO2 emissions, the age of first marriage, income per capita , gross domestic product, energy expenditure, energy consumption.The tool allows us to easily correlate any of the indicators and through a temporary animation have the possibility of analyzing the temporal evolution. In addition, we can choose the countries we want to study. For example, we can analyze the relationship between the age of first marriage and the number of children per woman.
 library(gapminder)
 library(dplyr)
+# Library packages
+# install.packages(c("gapminder", "plotly"))
+library(gapminder)
+library(plotly)
+
+# About gapminder data
+gapminder_dim <- dim(gapminder)
+gapminder_years <- unique(gapminder$year)
+gapminder_n_countries <- length(unique(gapminder$country))
 ## Warning: package 'HIV' was built under R version
 ##
 ## Attaching package: 'HIV'
